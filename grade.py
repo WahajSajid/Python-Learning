@@ -8,3 +8,5 @@ elif obtainedMarks >=40 and obtainedMarks<54:
     print("Grade: C")
 else: 
     print("Fail")
+
+    
