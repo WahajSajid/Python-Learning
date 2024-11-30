@@ -4,7 +4,8 @@ import sys
 #Well, sys is the library which let us handle the command line arguments. 
 
 if len(sys.argv) < 2:
-    print("too few arguments!")
-elif len(sys.argv) > 2:
-    print("too many arguments!")
-else: print("hello, my name is",sys.argv[1])
+    sys.exit("too few arguments!")
+
+# the syntax I defines here "sys.argv[1:]" it means list is going to start from the index 1 not 0. 
+for arg in sys.argv[1:]:
+    print("My name is",arg)
