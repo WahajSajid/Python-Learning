@@ -1,12 +1,7 @@
 import csv
-def main():
-  
-  students = []
-  with open("students.csv") as file:
-    reader = csv.reader(file)
-    for name,profession in reader:
-      students.append({"name":name,"profession":profession})
-  for student in sorted(students,key = lambda student:student["name"]):
-    print(f"{student['name']} is a {student['profession']}")
 
-main()
+name = input("What's your name? ")
+profession = input("What'your profession? ")
+with open("students.csv","a") as file:
+    writer  = csv.DictWriter(file,fieldnames=["Name","Profession"])
+    writer.writerow({"Name":name,"Profession":profession})
